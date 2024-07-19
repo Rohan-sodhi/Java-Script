@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="dora.jpg" id="dora" onmouseover="changeImg()" onmouseout="changeImg2()">
+    <script>
+        function changeImg(){
+            document.getElementById("dora").src="jerry.jpg"
+        }
+        function changeImg2(){
+            document.getElementById("dora").src="dora.jpg"
+        }
+    </script>
+</body>
+</html>

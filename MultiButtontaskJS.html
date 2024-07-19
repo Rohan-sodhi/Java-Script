@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            background-color: red;
+            height: 200px;
+            width: 80%;
+            margin-left: 130px;
+        }
+        .div2{
+            background-color: aquamarine;
+            height: 150px;
+            width: 80%;
+            margin-left: 130px;
+        }
+        .parent{
+            background-color: red;
+            height: 250px;
+            width: 80%;
+            margin-left: 130px;
+            display: flex;
+        }
+        .child1{
+            background-color: white;
+            margin-left: 100px;
+            height: 100px;
+            width: 150px;
+            
+        }
+        .child2{
+            background-color: white;
+            margin-left: 100px;
+            height: 100px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"><input  id="copyText" style="margin-left: 200px; margin-top: 80px;">
+    <input id="pasteText" style="margin-left: 150px;">
+    </div>
+    <div class="div2"><button onclick="copy()" style="margin-left: 100px; margin-top: 60px;">Button 1</button>
+    <button onclick="getMsg()" style="margin-left: 80px;">Button 2</button>
+    <button onclick="copyData()" style="margin-left: 80px;">Button 3</button>
+    <button onclick="copyNewData()" style="margin-left: 80px;">Button 4</button>
+    <button onclick="radioButtonAndCheckbox()" style="margin-left: 80px;">Button 5</button>
+    </div>
+    <div class="parent">
+        <div class="child1" id="id1">Hello</div>
+        <div class="child2" id="id2">Bye</div>
+    </div>
+
+    <script>
+        function copy() {
+           var x= document.getElementById("copyText").value
+            document.getElementById("pasteText").value=x 
+        }
+        function getMsg(){
+            alert(document.getElementById("copyText").value)
+            alert("Hello")
+            alert("Byee")
+        }
+        function copyData() { 
+            var x=document.getElementById("pasteText").value 
+            document.getElementById("id2").innerText=x
+        }
+        function copyNewData() {
+            var a=document.getElementById("copyText").value
+            document.getElementById("id1").innerHTML=`Hello ${a} ${a}`
+        }
+        function radioButtonAndCheckbox() {
+        var a= document.getElementById("copyText").type="radio"
+        var a= document.getElementById("pasteText").type="checkbox"
+           document.getElementById("id2").style.background="url('resize.jpg')"
+        }
+    </script>
+</body>
+</html>

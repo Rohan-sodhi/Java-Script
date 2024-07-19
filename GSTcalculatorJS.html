@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Amount <input id="Amount"><br>
+    <button onclick="result()">Calculate</button>
+    <div id="Amount Entered"></div>
+    <div id="gst"></div>
+    <div id="Total"></div>
+    <script>
+        function result() {
+            var Amount = parseInt(document.getElementById("Amount").value)
+            document.getElementById("Amount Entered").innerHTML="Amount Entered: " + Amount
+            var gst = Amount * (18 / 100)
+            document.getElementById("gst").innerHTML="GST: " + gst
+            var b = Amount + gst
+            document.getElementById("Total").innerHTML="Total: " + b
+        }
+    </script>
+</body>
+</html>

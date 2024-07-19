@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 100px;
+            display: flex;
+
+
+        }
+        .parent div{
+            height: 100px;
+            width: 100px;
+            
+        }
+        .child1{
+            background-color: red;
+        }
+        .child2{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1" id="id1">HELLO</div>
+        <div class="child2" id="id2"></div>
+    </div>
+    <button onclick="cut()">Cut</button>
+    <button ondblclick="paste()">Paste</button>
+    <script>
+        function cut(){
+            document.getElementById("id1").innerText=""
+        }
+        function paste(){
+            document.getElementById("id2").innerText="Hello"
+        }
+    </script>
+</body>
+</html>

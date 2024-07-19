@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd/Even Div Generator</title>
+    <style>
+        .yellow-div {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            
+        }
+        .red-div {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Odd/Even Div Generator</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="generateDivs()">Generate</button>
+    <div id="divContainer"></div>
+
+    <script>
+        function generateDivs() {
+            const number = document.getElementById('numberInput').value;
+            const divContainer = document.getElementById('divContainer');
+            divContainer.innerHTML = ''; // Clear previous divs
+
+            if (number % 2 === 0) {
+                for (let i = 0; i < number; i++) {
+                    const redDiv = document.createElement('div');
+                    redDiv.className = 'red-div';
+                    divContainer.appendChild(redDiv);
+                }
+            } else {
+                for (let i = 0; i < number; i++) {
+                    const yellowDiv = document.createElement('div');
+                    yellowDiv.className = 'yellow-div';
+                    divContainer.appendChild(yellowDiv);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

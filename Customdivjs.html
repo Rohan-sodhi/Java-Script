@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    color <input id="color"><br>
+    height <input id="height"><br>
+    width <input id="width"> <br>
+    background Color <input id="bg"> <br>
+    text <input id="text"> <br>
+    <button onclick="create()">Create</button>
+    <div id="colorFill"></div>
+    <div id="heightFill"></div>
+    <div id="widthFill"></div>
+    <div id="bgColor"></div>
+    <div id="textEnter"></div>
+
+    <script>
+        function create() {
+            var color = document.getElementById("color").value
+            document.getElementById("colorFill").innerHTML="color Fill:"+color
+
+            var height = parseInt(document.getElementById("height").value)
+            document.getElementById("heightFill").innerHTML="height Fill:"+height
+
+            var width = parseInt(document.getElementById("width").value)
+            document.getElementById("widthFill").innerHTML="width Fill:"+width
+
+            var bg =document.getElementById("bg").value
+            document.getElementById("bgColor").innerHTML="bg Color:"+bg
+
+            var text = document.getElementById("text").value
+            document.getElementById("textEnter").innerHTML="text Enter:"+text
+
+            var customDiv = document.createElement("div");
+            customDiv.style.color = color;
+            customDiv.style.height = height + "px";
+            customDiv.style.width = width + "px";
+            customDiv.style.backgroundColor = bg;
+            customDiv.innerHTML = text;
+            document.body.appendChild(customDiv);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getMsg()">Click</button>
+    <button ondblclick="printMsg()">GEt msg</button>
+    <h1 id="id1">Hello user</h1>
+    <button onclick="changeData()" >Change</button>
+    <script>
+        function getMsg(){
+            alert("hello world")
+        }
+        function printMsg(){
+            console.log("hello user")
+        }
+        function changeData(){
+            // id1.innerText="<mark>byeee</mark>"
+            // id1.innerHTML="<mark>byeee</mark>"
+            document.getElementById("id1").innerText="byeee"
+        }
+    </script>
+</body>
+</html>
